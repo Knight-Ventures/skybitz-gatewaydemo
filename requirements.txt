@@ -1,2 +1,2 @@
 requests==2.13.0
-XML2Dict==0.2.2
+xmltodict==0.10.2
