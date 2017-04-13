@@ -39,6 +39,18 @@ gettankenvtmp = '''<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-env
                             </soap:Body>
                             </soap:Envelope>'''
 
+getinvenvtmp = '''<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:GetInventory>
+         <tem:iConsumerId>{0}</tem:iConsumerId>
+         <!--Optional:-->
+         <tem:sAuthentication>{1}</tem:sAuthentication>
+         <tem:iAckTransactionId>0</tem:iAckTransactionId>
+      </tem:GetInventory>
+   </soapenv:Body>
+</soapenv:Envelope>'''
+
 def getOrgSoap():
     '''Returns the formatted soap xml request string for GetOrganization'''
     return getorgenvtmp.format(config.username, config.password)
@@ -50,3 +62,7 @@ def getLocSoap():
 def getTankSoap():
     '''Returns the formatted soap xml request string for GetTank'''
     return gettankenvtmp.format(config.username, config.password)
+
+def getInvSoap():
+    '''Returns the formatted soap xml request string for GetInventory'''
+    return getinvenvtmp.format(config.username, config.password)

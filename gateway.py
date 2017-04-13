@@ -32,8 +32,52 @@ class Gateway:
             bodyxml = {'error':'parse error'}
             return bodyxml
 
-    def parseDisctionary(self, d):
-        '''Convert dict output from parseResponse to JSON. 
+    def parseDictionary(self, d):
+        '''Convert dict output from parseResponse to JSON.
         Returns json formatted string'''
         # return json.dumps(d)
         return json.dumps(d, sort_keys=True, indent=4)
+
+    def saveRespJSON(self, resp):
+        '''Save the dictionary formatted response from parseResponse to local JSON file.'''
+        try:
+            file = ''  #create json filename from root key
+            for k in resp['soap:Body']:
+                file = str(k) + '.json'
+                break
+            
+            f = open(file, 'w')
+            f.write(json.dumps(resp, sort_keys=True, indent=4))
+            return True
+        except:
+            return False
+
+class Process():
+    '''Process class for processing data in JSON obtained from Gateway'''
+
+    def __init__(self):
+        '''Create process for reading data from json'''
+        self.tankjsonfile = 'GetTankResponse.json'
+    
+    def getTankList(self):
+        try:
+            f = open(self.tankjsonfile, 'r')
+            jsonfromfile = json.loads(f.read())
+            print(jsonfromfile)
+        except FileNotFoundError:
+            print('filenotfound')
+            jsonfromfile = '{ }'
+        
+        #TODO: Fix this, the try catch is for key error, should be inside the for loop
+        #OTHERWISE, this section works well.
+        returnlist = []
+        try:
+            list = jsonfromfile['soap:Body']['GetTankResponse']['GetTankResult']['Tank'] #returns list
+            #print('list')
+            for k in list:
+                if k['iTankID']:
+                    returnlist.append(k['iTankID'])
+        except:
+            print('error')
+            pass
+        return returnlist
