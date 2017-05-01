@@ -1,6 +1,7 @@
 import requests
 import xmltodict
 import json
+import os
 
 class Gateway:
     '''Gateway class'''
@@ -65,6 +66,16 @@ class Gateway:
                 break
             writefile = open(file, 'w')
             writefile.write(json.dumps(resp, sort_keys=True, indent=4))
+            return True
+        except FileNotFoundError:
+            return False
+
+    def delete_resp_unique_json(self, delfile):
+        '''Delete the local JSON file.
+        Used to clean up json files or to remove any with no records.
+        Returns bool status of json file delete'''
+        try:
+            os.remove(delfile)
             return True
         except FileNotFoundError:
             return False
@@ -141,11 +152,12 @@ class Process():
     def count_inventorycalcalrm(self):
         '''Get inventory calc alarm list. Returns a count of the items in the list as an int'''
         jsonfromfile = self.get_json_file(self.invcalcalrmfile)
-        #TODO: Fix to only count if valid data for each list element (ie. not xsi:nil), see below
         listcount = 0
         try:
             listfromjson = jsonfromfile['soap:Body']['GetInventoryCalcAlarmResponse']['GetInventoryCalcAlarmResult']['CalcAlarmInventory'] #returns list
-            listcount = len(listfromjson)
+            for k in listfromjson:
+                if k['iInventoryID']:
+                    listcount += 1
         except KeyError:
             pass
             #log key error, ignore?

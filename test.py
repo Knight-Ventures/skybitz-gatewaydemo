@@ -87,20 +87,21 @@ from datetime import datetime
 # soapResponse = g.gateway_request(soapreqs.get_invalrm_soap())
 # tankgenlatlonstr = '10203647'
 # soapResponse = g.gateway_request(soapreqs.get_tankgenlatlon_soap(tankgenlatlonstr))
+# # Parse response
+# dresp = g.parse_response(soapResponse)
+# print(dresp)
 
 # INV ALARM CALC TRANSACTIONID TESTS
-# Step1 - make request using simple inventory soap (ie. zero as ACK code), parse response and save json file
-g = gateway.Gateway()
-dictresponse = g.parse_response(g.gateway_request(soapreqs.get_tank_soap()))
-#dictresponse = g.parse_response(g.gateway_request(soapreqs.get_inv_soap())) #soapreqs.get_invalrm_transactid_soap('0') works the same
-g.save_resp_json(dictresponse)
-# Step2 - Process the json file to get the TransactionID and Inv Calc Alarm count
-p = gateway.Process()
-transactidstr = p.get_inventorycalcalrm_transactID()
-invalrmcount = p.count_inventorycalcalrm()
-print('TransactionID: ' + transactidstr + ' Inv Count: ' + str(invalrmcount))
-time.sleep(2) #wait 2 secs
-#Step2.5 - make a second gateway req using the TransactionID to create unique json - first test
+# # Step1 - make request using simple inventory soap (ie. zero as ACK code), parse response and save json file
+# g = gateway.Gateway()
+# dictresponse = g.parse_response(g.gateway_request(soapreqs.get_invalrm_soap())) #soapreqs.get_invalrm_transactid_soap('0') works the same
+# # Step2 - Process the json file to get the TransactionID and Inv Calc Alarm count
+# p = gateway.Process()
+# transactidstr = p.get_inventorycalcalrm_transactID()
+# invalrmcount = p.count_inventorycalcalrm()
+# print('TransactionID: ' + transactidstr + ' Inv Count: ' + str(invalrmcount))
+# time.sleep(2) #wait 2 secs
+# #Step2.5 - make a second gateway req using the TransactionID to create unique json - first test
 # testinvtransactid = '47174434'
 # #g.parse_response(g.gateway_request(soapreqs.get_invalrm_transactid_soap(testinvtransactid)))
 # newinvalrmcount = p.count_inventorycalcalrm_unique(testinvtransactid)
@@ -126,6 +127,78 @@ time.sleep(2) #wait 2 secs
 #     newtransactidstr = p.get_inventorycalcalrm_unique_transactID(nexttransactidstr) #temp var
 #     print('NEW TransactionID: ' + nexttransactidstr + ' NEW Inv Count: ' + str(newinvalrmcount))
 #     nexttransactidstr = newtransactidstr #updates nexttransactidstr
+
+
+# NEW TEST TO GET LATEST INV RECORDS - THIS PROCESS GIVES YOU LATEST UNIQUE INVCALCALARM
+#NOTE: THIS METHOD ONLY WORKS IF YOU HAVE LESS THAN 100 TANKS!
+g = gateway.Gateway()
+g.save_resp_json(g.parse_response(g.gateway_request(soapreqs.get_invalrm_soap())))
+
+# Everything depends on count of this first item
+p = gateway.Process()
+print(str(p.count_inventorycalcalrm()))
+#IF COUNT <= 0 --> NO NEW INV RECORDS
+        #MUST USE LATEST UNIQUE JSON FILE FOR INV RECORDS
+#ELSE IF COUNT >= 100 --> NEED TO ITERATE THRU TO GET LATEST
+        #MUST MAKE SURE YOU SAVE EACH UNIQUE JSON! ONCE YOU CALL THE WEB SERVICE WITH TRANSACTID, YOU CANNOT GET IT AGAIN!
+#ELSE YOU HAVE THE LATEST INV IN GetInventoryCalcAlarmResponse.json, SAVE TO LATEST
+
+
+# transactidstr = p.get_inventorycalcalrm_transactID()
+# # invalrmcount = p.count_inventorycalcalrm()
+# print('TransactionID: ' + transactidstr)
+# #get and save unique json reponse
+# uniquedictresponse = g.parse_response(g.gateway_request(soapreqs.get_invalrm_transactid_soap(transactidstr)))
+# g.save_resp_unique_json(uniquedictresponse, transactidstr)
+# #get the new inv alarm count from the uniquedictresponse
+# invalrmcount = p.count_inventorycalcalrm_unique(transactidstr)
+# print(' NEW Inv Count: ' + str(invalrmcount))
+# #determine inv count - if less than 100, nothing more to do
+# nexttolastidstr = ''
+# newuniquedictresponse = []
+# if invalrmcount == 100:
+#     print('more than 100, need to iterate to latest')
+#     #set transactid and count to first one above
+#     nexttransactidstr = transactidstr
+#     nextinvalrmcount = invalrmcount
+#     # while more to get, set new transactid to that from latest unique json
+#     while True:
+#         #save next to last id string in case last item has zero records
+#         nexttolastidstr = nexttransactidstr
+#         #break while loop if count less than 100
+#         if nextinvalrmcount < 100:
+#             break
+#         print('fetching next...')
+#         newtransactidstr = p.get_inventorycalcalrm_unique_transactID(nexttransactidstr)
+#         print('NEW TransactionID: ' + newtransactidstr)
+#         #get the next unique json from gateway request
+#         newuniquedictresponse = g.parse_response(g.gateway_request(soapreqs.get_invalrm_transactid_soap(newtransactidstr)))
+#         g.save_resp_unique_json(newuniquedictresponse, newtransactidstr)
+#         #get the new inv alrm count from the newtransactidstr
+#         newinvalrmcount = p.count_inventorycalcalrm_unique(newtransactidstr)
+#         print(' NEW Inv Count: ' + str(newinvalrmcount))
+#         #update nexttransactid and nextinvalrmcount
+#         nexttransactidstr = p.get_inventorycalcalrm_unique_transactID(nexttransactidstr)
+#         nextinvalrmcount = p.count_inventorycalcalrm_unique(nexttransactidstr)
+#         time.sleep(3)
+#     #now, check if latest unique json has no records, if so delete it
+#     if len(nexttolastidstr) > 0 and newinvalrmcount < 1:
+#         deletresponsestr = 'data/GetInventoryCalcAlarmResponse{0}.json'
+#         g.delete_resp_unique_json(deletresponsestr.format(nexttransactidstr))
+#     #finally, rename the unique inv json file to be the generic starting point GetInventoryCalcAlarmResponselatest json file!
+#     if len(str(newuniquedictresponse)) > 0:
+#         g.save_resp_unique_json(newuniquedictresponse, 'latest')
+# else:
+#     print('less than 100, have latest')
+#     g.save_resp_unique_json(uniquedictresponse, 'latest')
+
+
+
+
+
+
+
+
 
 
 # PROCESSING TEST SECTION ONLY
@@ -157,15 +230,15 @@ time.sleep(2) #wait 2 secs
 #print(str(p.get_tankname_bytankid('10203647')))
 
 
-# TEST 8 - full test working thru step 4
+# # TEST 8 - full test working thru step 4 - fully working
 # g = gateway.Gateway()
 # p = gateway.Process()
 # #step1 - req all tanks and write to master tanks file
 # g.save_resp_json(g.parse_response(g.gateway_request(soapreqs.get_tank_soap())))
 # time.sleep(2)
-#step2 - build tank list from file created in step 1
+# #step2 - build tank list from file created in step 1
 # tanklist = p.get_tank_list() #gives list of tank ids - THIS IS AN IMPORTANT STEP FOR SEVERAL ITEMS BELOW!!!!!!!
-#print(tanklist)
+# #print(tanklist)
 # for item in tanklist: #for each unique tank, create a unique file for each tank
 #     g.save_resp_unique_json(g.parse_response(g.gateway_request(soapreqs.get_tankgenlatlon_soap(item))), item)
 #     time.sleep(1)
@@ -175,20 +248,17 @@ time.sleep(2) #wait 2 secs
 # #note: for this to work, you must have already done steps 1 and 3 above - need tank and inv
 # for item in tanklist:
 #     latestinvidstr = p.get_latestinvid_bytank(str(item)) #get the latest inventory id for the tank
-#     print(latestinvidstr)
-#     print('Tank ' + p.get_tankname_bytankid_file(str(item)) + ' currently has gross vol of ' 
-#         + str(int(float(p.get_grossvol_byinvid(latestinvidstr)))) + ' gals')
+#     print('Tank ' + p.get_tankname_bytankid_file(str(item)) + ' currently has gross vol of '
+#           + str(int(float(p.get_grossvol_byinvid(latestinvidstr)))) + ' gals')
 # #step5 - works now, similar to step 4
 # g.save_resp_json(g.parse_response(g.gateway_request(soapreqs.get_invalrm_soap())))
-# step6 - test transactID
-# print(p.get_inventory_transactID())
-# step7 - parse and display the data
+# #step7 - parse and display the data
 # for item in tanklist:
 #     latestinvidstr = p.get_latestinvid_bytank(str(item)) #get the latest inventory id for the tank
 #     alarmstatus = p.get_tankalrm_byinvid(latestinvidstr)
 #     if alarmstatus != '0':
-#         print('Tank ' + p.get_tankname_bytankid_file(str(item)) + ' currently has alarm status of ' 
-#             + alarmstatus + ' calc alarm bits')
+#         print('Tank ' + p.get_tankname_bytankid_file(str(item)) + ' currently has alarm status of '
+#               + alarmstatus + ' calc alarm bits')
 # #TODO: Perform an alarm bits lookup to decode the actual alarm state
 
 
