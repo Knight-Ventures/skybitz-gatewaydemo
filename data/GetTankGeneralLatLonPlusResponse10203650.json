@@ -1,0 +1,47 @@
+{
+    "soap:Body": {
+        "GetTankGeneralLatLonPlusResponse": {
+            "@xmlns": "http://tempuri.org/",
+            "GetTankGeneralLatLonPlusResult": {
+                "bActive": "true",
+                "bIsAffiliateTank": "false",
+                "bIsPTTank": "false",
+                "bIsReplicate": "false",
+                "bTankNormallyFills": "false",
+                "bTankTimeStamp": "2359630007",
+                "dAvgUsage": "205.77142",
+                "dEstDaysAlarm": "5.1",
+                "dEstDaysCLA": "0",
+                "dEstDaysCritical": "9.4",
+                "dEstDaysLA": "0",
+                "dEstDaysToCapacity": "-1",
+                "dEstDaysToEmpty": "0",
+                "dEstDaysToReOrder": "11.3",
+                "dEstDaysToSafetyStock": "11.3",
+                "dForecastDailyUsage": "205.77142",
+                "dTankMinimum": "0.00000",
+                "iAffiliatedLocationID": "0",
+                "iAffiliatedOrganizationID": "0",
+                "iInstallationStatus": "1",
+                "iTankID": "10203650",
+                "iTransportStatusID": "0",
+                "sAffiliatedLocationName": null,
+                "sAffiliatedOrganizationName": null,
+                "sGPSAddress": "2323 N Milwaukee Ave, Chicago, IL 60647, USA",
+                "sKeyNote": "26",
+                "sLatLon": "41.9236774000,-87.6980775000",
+                "sLatLonClass": "Location",
+                "sLatLonType": "Address",
+                "sRMAStatus": null,
+                "sRegion": "West",
+                "sRoute": "Chicago",
+                "sTankName": "sim04",
+                "sUserDefined": null,
+                "sUserDefinedB": null,
+                "sUserTankID": "-1"
+            },
+            "iErrorCode": "200",
+            "sErrorMsg": "OK"
+        }
+    }
+}

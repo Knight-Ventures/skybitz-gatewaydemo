@@ -1,0 +1,47 @@
+{
+    "soap:Body": {
+        "GetTankGeneralLatLonPlusResponse": {
+            "@xmlns": "http://tempuri.org/",
+            "GetTankGeneralLatLonPlusResult": {
+                "bActive": "true",
+                "bIsAffiliateTank": "false",
+                "bIsPTTank": "false",
+                "bIsReplicate": "false",
+                "bTankNormallyFills": "false",
+                "bTankTimeStamp": "2359629989",
+                "dAvgUsage": "237.02857",
+                "dEstDaysAlarm": "2.0",
+                "dEstDaysCLA": "0",
+                "dEstDaysCritical": "3.8",
+                "dEstDaysLA": "0",
+                "dEstDaysToCapacity": "-1",
+                "dEstDaysToEmpty": "0",
+                "dEstDaysToReOrder": "4.7",
+                "dEstDaysToSafetyStock": "4.7",
+                "dForecastDailyUsage": "237.02857",
+                "dTankMinimum": "0.00000",
+                "iAffiliatedLocationID": "0",
+                "iAffiliatedOrganizationID": "0",
+                "iInstallationStatus": "1",
+                "iTankID": "10203648",
+                "iTransportStatusID": "0",
+                "sAffiliatedLocationName": null,
+                "sAffiliatedOrganizationName": null,
+                "sGPSAddress": "1800 N Clybourn Ave, Chicago, IL 60614, USA",
+                "sKeyNote": "32",
+                "sLatLon": "41.9137245000,-87.6537358000",
+                "sLatLonClass": "Location",
+                "sLatLonType": "Address",
+                "sRMAStatus": null,
+                "sRegion": "West",
+                "sRoute": "Chicago",
+                "sTankName": "sim02",
+                "sUserDefined": null,
+                "sUserDefinedB": null,
+                "sUserTankID": "-1"
+            },
+            "iErrorCode": "200",
+            "sErrorMsg": "OK"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "soap:Body": {
+        "GetInventoryCalcAlarmResponse": {
+            "@xmlns": "http://tempuri.org/",
+            "iErrorCode": "128",
+            "iTransactionId": "0",
+            "sErrorMsg": "No rows retrieved"
+        }
+    }
+}

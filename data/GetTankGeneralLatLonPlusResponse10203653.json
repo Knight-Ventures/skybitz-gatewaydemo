@@ -1,0 +1,47 @@
+{
+    "soap:Body": {
+        "GetTankGeneralLatLonPlusResponse": {
+            "@xmlns": "http://tempuri.org/",
+            "GetTankGeneralLatLonPlusResult": {
+                "bActive": "true",
+                "bIsAffiliateTank": "false",
+                "bIsPTTank": "false",
+                "bIsReplicate": "false",
+                "bTankNormallyFills": "false",
+                "bTankTimeStamp": "2359630035",
+                "dAvgUsage": "495.42857",
+                "dEstDaysAlarm": "-0.5",
+                "dEstDaysCLA": "0",
+                "dEstDaysCritical": "0.9",
+                "dEstDaysLA": "0",
+                "dEstDaysToCapacity": "-1",
+                "dEstDaysToEmpty": "0",
+                "dEstDaysToReOrder": "1.5",
+                "dEstDaysToSafetyStock": "1.5",
+                "dForecastDailyUsage": "495.42857",
+                "dTankMinimum": "0.00000",
+                "iAffiliatedLocationID": "0",
+                "iAffiliatedOrganizationID": "0",
+                "iInstallationStatus": "1",
+                "iTankID": "10203653",
+                "iTransportStatusID": "0",
+                "sAffiliatedLocationName": null,
+                "sAffiliatedOrganizationName": null,
+                "sGPSAddress": "4001 Campbell Ave, Arlington, VA 22206, USA",
+                "sKeyNote": "81",
+                "sLatLon": "38.8412380000,-77.0882640000",
+                "sLatLonClass": "Location",
+                "sLatLonType": "Address",
+                "sRMAStatus": null,
+                "sRegion": "East",
+                "sRoute": "DC Area",
+                "sTankName": "sim07",
+                "sUserDefined": null,
+                "sUserDefinedB": null,
+                "sUserTankID": "-1"
+            },
+            "iErrorCode": "200",
+            "sErrorMsg": "OK"
+        }
+    }
+}

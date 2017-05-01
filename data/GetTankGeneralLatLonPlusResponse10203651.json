@@ -1,0 +1,47 @@
+{
+    "soap:Body": {
+        "GetTankGeneralLatLonPlusResponse": {
+            "@xmlns": "http://tempuri.org/",
+            "GetTankGeneralLatLonPlusResult": {
+                "bActive": "true",
+                "bIsAffiliateTank": "false",
+                "bIsPTTank": "false",
+                "bIsReplicate": "false",
+                "bTankNormallyFills": "false",
+                "bTankTimeStamp": "2359630016",
+                "dAvgUsage": "119.14285",
+                "dEstDaysAlarm": "3.8",
+                "dEstDaysCLA": "0",
+                "dEstDaysCritical": "9.3",
+                "dEstDaysLA": "0",
+                "dEstDaysToCapacity": "-1",
+                "dEstDaysToEmpty": "0",
+                "dEstDaysToReOrder": "11.8",
+                "dEstDaysToSafetyStock": "11.8",
+                "dForecastDailyUsage": "119.14285",
+                "dTankMinimum": "0.00000",
+                "iAffiliatedLocationID": "0",
+                "iAffiliatedOrganizationID": "0",
+                "iInstallationStatus": "1",
+                "iTankID": "10203651",
+                "iTransportStatusID": "0",
+                "sAffiliatedLocationName": null,
+                "sAffiliatedOrganizationName": null,
+                "sGPSAddress": "6400 Chillum Pl NW, Washington, DC 20012, USA",
+                "sKeyNote": "15",
+                "sLatLon": "38.9674910000,-77.0126260000",
+                "sLatLonClass": "Location",
+                "sLatLonType": "Address",
+                "sRMAStatus": null,
+                "sRegion": "East",
+                "sRoute": "DC Area",
+                "sTankName": "sim05",
+                "sUserDefined": null,
+                "sUserDefinedB": null,
+                "sUserTankID": "-1"
+            },
+            "iErrorCode": "200",
+            "sErrorMsg": "OK"
+        }
+    }
+}

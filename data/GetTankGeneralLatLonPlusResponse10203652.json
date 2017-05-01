@@ -1,0 +1,47 @@
+{
+    "soap:Body": {
+        "GetTankGeneralLatLonPlusResponse": {
+            "@xmlns": "http://tempuri.org/",
+            "GetTankGeneralLatLonPlusResult": {
+                "bActive": "true",
+                "bIsAffiliateTank": "false",
+                "bIsPTTank": "false",
+                "bIsReplicate": "false",
+                "bTankNormallyFills": "false",
+                "bTankTimeStamp": "2359630025",
+                "dAvgUsage": "697.71428",
+                "dEstDaysAlarm": "1.2",
+                "dEstDaysCLA": "0",
+                "dEstDaysCritical": "3.1",
+                "dEstDaysLA": "0",
+                "dEstDaysToCapacity": "-1",
+                "dEstDaysToEmpty": "0",
+                "dEstDaysToReOrder": "4.0",
+                "dEstDaysToSafetyStock": "4.0",
+                "dForecastDailyUsage": "697.71428",
+                "dTankMinimum": "0.00000",
+                "iAffiliatedLocationID": "0",
+                "iAffiliatedOrganizationID": "0",
+                "iInstallationStatus": "1",
+                "iTankID": "10203652",
+                "iTransportStatusID": "0",
+                "sAffiliatedLocationName": null,
+                "sAffiliatedOrganizationName": null,
+                "sGPSAddress": "2052 West Virginia Ave NE, Washington, DC 20002, USA",
+                "sKeyNote": "110",
+                "sLatLon": "38.9148405000,-76.9814066000",
+                "sLatLonClass": "Location",
+                "sLatLonType": "Address",
+                "sRMAStatus": null,
+                "sRegion": "East",
+                "sRoute": "DC Area",
+                "sTankName": "sim06",
+                "sUserDefined": null,
+                "sUserDefinedB": null,
+                "sUserTankID": "-1"
+            },
+            "iErrorCode": "200",
+            "sErrorMsg": "OK"
+        }
+    }
+}

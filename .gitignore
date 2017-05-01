@@ -90,3 +90,5 @@ ENV/
 
 # My Additions
 config.py
+.vscode/
+macvenv/
