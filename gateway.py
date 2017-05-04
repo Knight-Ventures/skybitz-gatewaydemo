@@ -94,7 +94,8 @@ class Process():
         self.tankjsonfile = 'data/GetTankResponse.json'
         self.inventoryfile = 'data/GetInventoryResponse.json'
         self.tankgenlatlonplus = 'data/GetTankGeneralLatLonPlusResponse{0}.json'
-        self.invcalcalrmfile = 'data/GetInventoryCalcAlarmResponse.json'
+        # self.invcalcalrmfile = 'data/GetInventoryCalcAlarmResponse.json'
+        self.invcalcalrmfile = 'data/GetInventoryCalcAlarmResponse_latest.json'
         self.uniqueinvcalcalrmfile = 'data/GetInventoryCalcAlarmResponse{0}.json'
 
     def get_json_file(self, filestring):
@@ -201,30 +202,40 @@ class Process():
     def get_tankinv_list(self):
         '''Get tank inventory list. 
         Returns list of tank IDs with inventory IDs'''
+        #TODO: FIX THIS FOR INVCALCALARM
+        #NOTE: Updated to use GetInventoryCalcAlarm instead of GetInventory
         tankjsonfromfile = self.get_json_file(self.tankjsonfile)
-        invjsonfromfile = self.get_json_file(self.inventoryfile)
+        #invjsonfromfile = self.get_json_file(self.inventoryfile)
+        invjsonfromfile = self.get_json_file(self.invcalcalrmfile)
 
         returnlist = []
-        #check for key error
-        try:
-            tanklistfromjson = tankjsonfromfile['soap:Body']['GetTankResponse']['GetTankResult']['Tank'] #returns list
-            invlistfromjson = invjsonfromfile['soap:Body']['GetInventoryResponse']['GetInventoryResult']['Inventory'] #returns list
-            for k in tanklistfromjson:
+        tanklistfromjson = tankjsonfromfile['soap:Body']['GetTankResponse']['GetTankResult']['Tank'] #returns list
+        #invlistfromjson = invjsonfromfile['soap:Body']['GetInventoryResponse']['GetInventoryResult']['Inventory'] #returns list
+        invlistfromjson = invjsonfromfile['soap:Body']['GetInventoryCalcAlarmResponse']['GetInventoryCalcAlarmResult']['CalcAlarmInventory'] #returns list
+        for k in tanklistfromjson:
+            try:
+                #now iterate through each tank
                 if k['iTankID']:
                     listelementtoappend = [] #need combo of k['iTankID'] AND k['iInventoryID']
                     for k2 in invlistfromjson:
-                        if str(k['iTankID']) == str(k2['iTankID']) and k2['iInventoryID']:
-                            listelementtoappend.append(k2['iInventoryID'])
-                    tankid_dict = { str(k['iTankID']) : listelementtoappend} #create dict with key=tankID and value=list of invIDs
+                        try:
+                            #check tank id against each item in inv to add all inv records for that tank id
+                            if str(k['iTankID']) == str(k2['iTankID']) and k2['iInventoryID']:
+                                listelementtoappend.append(k2['iInventoryID'])
+                        except KeyError:
+                            pass
+                            #log key error?
+                    tankid_dict = {k['iTankID'] : listelementtoappend} #create dict with key=tankID and value=list of invIDs
                     returnlist.append(tankid_dict) #returnlist.append(k['iTankID'])
-        except KeyError:
-            pass
-            #log key error, ignore?
+            except KeyError:
+                pass
+                #log key error?
         return returnlist
 
     def get_latestinvid_bytank(self, tankidstr):
         '''Get the latest inventory id by tank id. 
         Return inventory id string'''
+        #NOTE: Updated to use GetInventoryCalcAlarm instead of GetInventory
         returnlatestinvstr = ''
         bothlist = self.get_tankinv_list()
         for item in bothlist:
@@ -243,11 +254,14 @@ class Process():
     def get_grossvol_byinvid(self, invidstr):
         '''Get the gross volume from GetInventoryReponse based on inventory id. 
         Return gross inventory value as string'''
-        jsonfromfile = self.get_json_file(self.inventoryfile)
+        #NOTE: Updated to use GetInventoryCalcAlarm instead of GetInventory
+        # jsonfromfile = self.get_json_file(self.inventoryfile)
+        jsonfromfile = self.get_json_file(self.invcalcalrmfile)
 
         #check for key error
         try:
-            listfromjson = jsonfromfile['soap:Body']['GetInventoryResponse']['GetInventoryResult']['Inventory'] #returns list
+            # listfromjson = jsonfromfile['soap:Body']['GetInventoryResponse']['GetInventoryResult']['Inventory'] #returns list
+            listfromjson = jsonfromfile['soap:Body']['GetInventoryCalcAlarmResponse']['GetInventoryCalcAlarmResult']['CalcAlarmInventory'] #returns list
             for k in listfromjson:
                 if str(k['iInventoryID']) == invidstr:
                     return str(k['dGrossVolume'])

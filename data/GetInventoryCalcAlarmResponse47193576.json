@@ -1,0 +1,1004 @@
+{
+    "soap:Body": {
+        "GetInventoryCalcAlarmResponse": {
+            "@xmlns": "http://tempuri.org/",
+            "GetInventoryCalcAlarmResult": {
+                "CalcAlarmInventory": [
+                    {
+                        "dGrossVolume": "197.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "197.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 7:51:13 AM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "8",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194755851",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203647",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod1",
+                        "sSerialNumber": "210203647",
+                        "sUTCInventoryTime": "5/3/2017 12:51:13 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "240.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "240.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 7:51:13 AM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "8",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194755852",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203648",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod2",
+                        "sSerialNumber": "210203648",
+                        "sUTCInventoryTime": "5/3/2017 12:51:13 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "3080.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "3080.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 7:51:13 AM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194755853",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203649",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod3",
+                        "sSerialNumber": "210203649",
+                        "sUTCInventoryTime": "5/3/2017 12:51:13 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "2570.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "2570.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 7:51:13 AM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194755854",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203650",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod3",
+                        "sSerialNumber": "210203650",
+                        "sUTCInventoryTime": "5/3/2017 12:51:13 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "1895.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "1895.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 6:51:13 AM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194755855",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203651",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod3",
+                        "sSerialNumber": "210203651",
+                        "sUTCInventoryTime": "5/3/2017 11:51:13 AM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "2970.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "2970.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 6:51:13 AM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194755856",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203652",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod4",
+                        "sSerialNumber": "210203652",
+                        "sUTCInventoryTime": "5/3/2017 11:51:13 AM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "2352.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "2352.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 6:51:13 AM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194755857",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203653",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod4",
+                        "sSerialNumber": "210203653",
+                        "sUTCInventoryTime": "5/3/2017 11:51:13 AM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "1010.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "1010.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 7:51:13 AM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194755858",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203654",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod4",
+                        "sSerialNumber": "210203654",
+                        "sUTCInventoryTime": "5/3/2017 11:51:13 AM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "4208.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "4208.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 7:51:13 AM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194755859",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203655",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod5",
+                        "sSerialNumber": "210203655",
+                        "sUTCInventoryTime": "5/3/2017 12:51:13 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "2680.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "2680.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 7:51:13 AM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194755860",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203656",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod5",
+                        "sSerialNumber": "210203656",
+                        "sUTCInventoryTime": "5/3/2017 11:51:13 AM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "186.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "186.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 10:51:13 AM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "8",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194756798",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203647",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod1",
+                        "sSerialNumber": "210203647",
+                        "sUTCInventoryTime": "5/3/2017 3:51:13 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "208.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "208.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 10:51:13 AM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "8",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194756799",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203648",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod2",
+                        "sSerialNumber": "210203648",
+                        "sUTCInventoryTime": "5/3/2017 3:51:13 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "3032.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "3032.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 10:51:13 AM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194756800",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203649",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod3",
+                        "sSerialNumber": "210203649",
+                        "sUTCInventoryTime": "5/3/2017 3:51:13 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "2544.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "2544.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 10:51:13 AM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194756801",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203650",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod3",
+                        "sSerialNumber": "210203650",
+                        "sUTCInventoryTime": "5/3/2017 3:51:13 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "1880.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "1880.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 9:51:13 AM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194756802",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203651",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod3",
+                        "sSerialNumber": "210203651",
+                        "sUTCInventoryTime": "5/3/2017 2:51:13 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "2860.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "2860.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 9:51:13 AM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194756803",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203652",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod4",
+                        "sSerialNumber": "210203652",
+                        "sUTCInventoryTime": "5/3/2017 2:51:13 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "2271.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "2271.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 9:51:13 AM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194756804",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203653",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod4",
+                        "sSerialNumber": "210203653",
+                        "sUTCInventoryTime": "5/3/2017 2:51:13 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "992.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "992.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 10:51:13 AM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194756805",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203654",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod4",
+                        "sSerialNumber": "210203654",
+                        "sUTCInventoryTime": "5/3/2017 2:51:13 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "4109.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "4109.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 10:51:13 AM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194756806",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203655",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod5",
+                        "sSerialNumber": "210203655",
+                        "sUTCInventoryTime": "5/3/2017 3:51:13 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "2620.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "2620.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 10:51:13 AM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194756807",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203656",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod5",
+                        "sSerialNumber": "210203656",
+                        "sUTCInventoryTime": "5/3/2017 2:51:13 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "175.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "175.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 1:51:14 PM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "8",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194756840",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203647",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod1",
+                        "sSerialNumber": "210203647",
+                        "sUTCInventoryTime": "5/3/2017 6:51:14 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "1968.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "1968.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 1:51:14 PM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "256",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194756841",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203648",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod2",
+                        "sSerialNumber": "210203648",
+                        "sUTCInventoryTime": "5/3/2017 6:51:14 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "2984.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "2984.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 1:51:14 PM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194756842",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203649",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod3",
+                        "sSerialNumber": "210203649",
+                        "sUTCInventoryTime": "5/3/2017 6:51:14 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "2518.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "2518.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 1:51:14 PM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194756843",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203650",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod3",
+                        "sSerialNumber": "210203650",
+                        "sUTCInventoryTime": "5/3/2017 6:51:14 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "1865.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "1865.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 12:51:14 PM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194756844",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203651",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod3",
+                        "sSerialNumber": "210203651",
+                        "sUTCInventoryTime": "5/3/2017 5:51:14 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "2750.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "2750.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 12:51:14 PM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194756845",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203652",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod4",
+                        "sSerialNumber": "210203652",
+                        "sUTCInventoryTime": "5/3/2017 5:51:14 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "2190.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "2190.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 12:51:14 PM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194756846",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203653",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod4",
+                        "sSerialNumber": "210203653",
+                        "sUTCInventoryTime": "5/3/2017 5:51:14 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "974.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "974.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 1:51:14 PM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194756847",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203654",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod4",
+                        "sSerialNumber": "210203654",
+                        "sUTCInventoryTime": "5/3/2017 5:51:14 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "4010.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "4010.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 1:51:14 PM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194756848",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203655",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod5",
+                        "sSerialNumber": "210203655",
+                        "sUTCInventoryTime": "5/3/2017 6:51:14 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "dGrossVolume": "2560.00000",
+                        "dLevel": "0.00000",
+                        "dNetVolume": "2560.00000",
+                        "dSensorRange": "10",
+                        "dTemperature": "68.00000",
+                        "dtLocalInventoryTime": "5/3/2017 1:51:14 PM",
+                        "iBatteryLevel": "100",
+                        "iCalcAlarmBits": "0",
+                        "iHighSetPoint": "100",
+                        "iInventoryID": "194756849",
+                        "iLowSetPoint": "0",
+                        "iRSSILevel": "0",
+                        "iSensorData": "0",
+                        "iSensorMax": "4096",
+                        "iSensorOffset": "0",
+                        "iTankID": "10203656",
+                        "iTemperatureData": "0",
+                        "sProductName": "Prod5",
+                        "sSerialNumber": "210203656",
+                        "sUTCInventoryTime": "5/3/2017 5:51:14 PM",
+                        "sUserLocationID": null,
+                        "sUserOrganizationID": null,
+                        "sUserProductID": null,
+                        "sUserTankID": "-1"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    },
+                    {
+                        "@xsi:nil": "true"
+                    }
+                ]
+            },
+            "iErrorCode": "200",
+            "iTransactionId": "47198510",
+            "sErrorMsg": null
+        }
+    }
+}

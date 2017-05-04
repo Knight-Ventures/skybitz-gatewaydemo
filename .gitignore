@@ -92,3 +92,4 @@ ENV/
 config.py
 .vscode/
 macvenv/
+mvenv/
