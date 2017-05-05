@@ -25,22 +25,14 @@ def build_latest_inv_file():
         # p = gateway.Process()
         thecount = p.count_inventorycalcalrm()
         transactidstr = p.get_inventorycalcalrm_transactID()
-        print('TransactID: ' + transactidstr)
         print('Inventory count: ' + str(thecount))
-        #IF COUNT <= 0 --> NO NEW INV RECORDS
-                #MUST USE LATEST UNIQUE JSON FILE FOR INV RECORDS
-        #ELSE IF COUNT >= 100 --> NEED TO ITERATE THRU TO GET LATEST
-                #MUST MAKE SURE YOU SAVE EACH UNIQUE JSON! ONCE YOU CALL THE WEB SERVICE WITH TRANSACTID, YOU CANNOT GET IT AGAIN!
-        #ELSE YOU HAVE THE LATEST INV IN GetInventoryCalcAlarmResponse.json, SAVE TO LATEST
         if thecount <= 0:
             #No new inv, Use latest unique - BASICALLY THIS MEANS NEED TO COMPARE EMPTY GetInventoryCalcAlarmResponse.json
             #FILE TO THE LATEST GetInventoryCalcAlarmResponse_latest.json INVENTORY THAT SOULD ALREADY EXIST
             print('Zero new inventory records, use the existing latest')
         elif thecount >= 100:
             #ITERATE TO GET THE LATEST INVENTORY GetInventoryCalcAlarmResponse_latest.json; ALSO DEL EMPTY LATEST IF PRESENT AT END!
-            print('more than 100 unprocessed inventory records, need to iterate to latest')
-            #transactidstr = p.get_inventorycalcalrm_transactID()
-            #invalrmcount = p.count_inventorycalcalrm()
+            print('100+ unprocessed inventory records, need to iterate to latest')
             print('TransactionID: ' + transactidstr)
             #get and save unique json reponse
             uniquedictresponse = g.parse_response(g.gateway_request(soapreqs.get_invalrm_transactid_soap(transactidstr)))
@@ -84,11 +76,13 @@ def build_latest_inv_file():
             g.save_resp_unique_json(newuniquedictresponse, '_latest') #now this thould be the last and latest unique response
         else:
             #save as latest inv json file
+            g.save_resp_unique_json(firstresponse, str(transactidstr)) #TODO is this needed?
+            time.sleep(1)
             g.save_resp_unique_json(firstresponse, '_latest')
-            # print('Less than 100')
-            # #also get and save unique json reponse for the next transactid - IMPORTANT: THIS WILL GIVE AN EMPTY NEXT REPONSE
-            # uniquedictresponse = g.parse_response(g.gateway_request(soapreqs.get_invalrm_transactid_soap(transactidstr)))
-            # g.save_resp_unique_json(firstresponse, transactidstr)
+            print('New inventory saved to latest')
+            #also get and save unique json reponse for the next transactid - IMPORTANT: THIS WILL GIVE AN EMPTY NEXT REPONSE
+            lastdictresponse = g.parse_response(g.gateway_request(soapreqs.get_invalrm_transactid_soap(transactidstr)))
+            g.save_resp_json(lastdictresponse)
     except:
         logtxt = 'error'
     return logtxt
@@ -116,9 +110,10 @@ while True:
     #next, for each tank in tanklist display the latest inventory and alarms - now uses GetInventoryCalcAlarm
     clatankidlist = []
     for item in tanklist:
+        #TODO Need to check for empty list here
         latestinvidstr = p.get_latestinvid_bytank(str(item)) #get the latest inventory id for the tank
         alarmstatus = p.get_tankalrm_byinvid(latestinvidstr)
-        print('latest inv id: ' + latestinvidstr)
+        #print('latest inv id: ' + latestinvidstr)
         if alarmstatus != '0':
             print('Tank ' + p.get_tankname_bytankid_file(str(item)) + ' currently has gross vol of '
                 + p.get_grossvol_byinvid(latestinvidstr) + ' gals with alarm status ' + alarmstatus)
@@ -128,16 +123,16 @@ while True:
         else:
             print('Tank ' + p.get_tankname_bytankid_file(str(item)) + ' currently has gross vol of '
                 + p.get_grossvol_byinvid(latestinvidstr) + ' gals')
-    #step 3 - now for tanks in CLA state, make call to proxy sim API to fill tank
-    print('step3 - make API call to fill tanks in CLA...')
-    #print('Tanks in CLA: ' + str(clatankidlist))
-    #TODO: see code/notes in test.py for the API call section, must be tested on machine running API for now
-    for clatank in clatankidlist:
-        url = 'http://localhost:5000/api/tank/fill/?id={0}&amt={1}'
-        apiidstr = p.get_tankname_bytankid_file(str(clatank))
-        intforapi = int(apiidstr[3:]) #convert string name like sim01 to int like 01
-        r = requests.get(url.format(str(intforapi), '6000')) #make call to Proxy Tank Sim API to fill tank
-        print(r.text)
-        time.sleep(1)
+    # #step 3 - now for tanks in CLA state, make call to proxy sim API to fill tank
+    # print('step3 - make API call to fill tanks in CLA...')
+    # #print('Tanks in CLA: ' + str(clatankidlist))
+    # #TODO: see code/notes in test.py for the API call section, must be tested on machine running API for now
+    # for clatank in clatankidlist:
+    #     url = 'http://localhost:5000/api/tank/fill/?id={0}&amt={1}'
+    #     apiidstr = p.get_tankname_bytankid_file(str(clatank))
+    #     intforapi = int(apiidstr[3:]) #convert string name like sim01 to int like 01
+    #     r = requests.get(url.format(str(intforapi), '6000')) #make call to Proxy Tank Sim API to fill tank
+    #     print(r.text)
+    #     time.sleep(1)
     print('zzzzz...')
     time.sleep(180)    #sleep for 3mins, increase this later
