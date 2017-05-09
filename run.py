@@ -12,9 +12,16 @@ def logit(strtoadd):
     except FileNotFoundError:
         return False
 
+def cleanup_uniqueinvfiles():
+    '''Delete all unique historical GetInventoryCalcAlarmResponse files from project data folder
+    Returns True/False completion'''
+    #TODO Implement and test this.
+    return False
+
 def build_latest_inv_file():
     '''NEW TEST TO GET LATEST INV RECORDS - THIS PROCESS GIVES YOU LATEST UNIQUE INVCALCALARM
     NOTE: THIS METHOD OF GETTING LATEST INVENTORY ONLY WORKS IF YOU HAVE LESS THAN 100 TANKS!'''
+    #THIS FUNCTION SEEMS TO WORK WELL NOW
     try:
         logtxt = ''
         # g = gateway.Gateway()
@@ -110,7 +117,6 @@ while True:
     #next, for each tank in tanklist display the latest inventory and alarms - now uses GetInventoryCalcAlarm
     clatankidlist = []
     for item in tanklist:
-        #TODO Need to check for empty list here
         latestinvidstr = p.get_latestinvid_bytank(str(item)) #get the latest inventory id for the tank
         alarmstatus = p.get_tankalrm_byinvid(latestinvidstr)
         #print('latest inv id: ' + latestinvidstr)
