@@ -129,16 +129,16 @@ while True:
         else:
             print('Tank ' + p.get_tankname_bytankid_file(str(item)) + ' currently has gross vol of '
                 + p.get_grossvol_byinvid(latestinvidstr) + ' gals')
-    # #step 3 - now for tanks in CLA state, make call to proxy sim API to fill tank
-    # print('step3 - make API call to fill tanks in CLA...')
-    # #print('Tanks in CLA: ' + str(clatankidlist))
-    # #TODO: see code/notes in test.py for the API call section, must be tested on machine running API for now
-    # for clatank in clatankidlist:
-    #     url = 'http://localhost:5000/api/tank/fill/?id={0}&amt={1}'
-    #     apiidstr = p.get_tankname_bytankid_file(str(clatank))
-    #     intforapi = int(apiidstr[3:]) #convert string name like sim01 to int like 01
-    #     r = requests.get(url.format(str(intforapi), '6000')) #make call to Proxy Tank Sim API to fill tank
-    #     print(r.text)
-    #     time.sleep(1)
+    #step 3 - now for tanks in CLA state, make call to proxy sim API to fill tank
+    print('step3 - make API call to fill tanks in CLA...')
+    #print('Tanks in CLA: ' + str(clatankidlist))
+    #TODO: see code/notes in test.py for the API call section, must be tested on machine running API for now
+    for clatank in clatankidlist:
+        url = 'http://localhost:5000/api/tank/fill/?id={0}&amt={1}'
+        apiidstr = p.get_tankname_bytankid_file(str(clatank))
+        intforapi = int(apiidstr[3:]) #convert string name like sim01 to int like 01
+        r = requests.get(url.format(str(intforapi), '6000')) #make call to Proxy Tank Sim API to fill tank
+        print(r.text)
+        time.sleep(1)
     print('zzzzz...')
-    time.sleep(180)    #sleep for 3mins, increase this later
+    time.sleep(3600)    #sleep for 1hour, use 3-4mins when testing
