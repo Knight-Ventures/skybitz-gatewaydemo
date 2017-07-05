@@ -8,7 +8,7 @@ class Gateway:
 
     def __init__(self):
         '''Establish a gateway connection using a connection URL and auth credentials'''
-        self.url = 'http://dev.tanklink.com/latlontdg_df/service.asmx?WSDL'
+        self.url = 'http://dev.tanklink.com/latlontdg/service.asmx?WSDL'
 
     def gateway_request(self, string):
         '''Make a request to the gateway web service with a specific soap envelope string.
